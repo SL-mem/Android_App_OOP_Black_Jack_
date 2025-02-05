@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroundregles"
+    android:backgroundTint="#40FFFFFF"
+    android:backgroundTintMode="src_over">
+
+
+
+    <TextView
+        android:id="@+id/Titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:textColor="#fafad2"
+        android:textSize="35sp"
+        android:background="@drawable/textview_border"
+        android:text="Règles Du Jeu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066"
+        tools:ignore="HardcodedText,SmallSp" />
+
+    <TextView
+        android:id="@+id/Corps_texte"
+        android:fontFamily="sans-serif-black"
+        android:layout_width="369dp"
+        android:layout_height="373dp"
+        android:layout_marginTop="32dp"
+        android:lineSpacingExtra="10dp"
+        android:text="Le jeu se joue contre un croupier.\n2 cartes sont distribuées au joueur ainsi qu'au croupier au début de la partie.\nLe but est d'atteindre la valeur la plus proche possible de 21 en sommant la valeur des cartes que vous avez en main.\n Lorsque le jeu débute, il y'a une 2 options :\n- Piocher\n- Ne rien faire\nSi le joueur choisit de piocher et que la somme de ses cartes est plus grande que 21, il perd sa mise.\nEn fin de manche, si le joueur obtient une somme plus proche ou égale à 21 que le croupier, le joueur remporte le double de sa mise. Si ex aequo: ni gain ni perte. "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titre"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

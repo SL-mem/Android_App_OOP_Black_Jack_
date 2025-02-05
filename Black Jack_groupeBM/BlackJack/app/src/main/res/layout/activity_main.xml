@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="182dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="389dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cartes_main_act" />
+
+    <TextView
+        android:id="@+id/black"
+        android:layout_width="131dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/jack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/jack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginEnd="177dp"
+        android:text="@string/jack"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.891" />
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="206sp"
+        android:layout_height="53sp"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="103dp"
+        android:background="@drawable/round_corner"
+        android:onClick="changeActivity"
+        android:text="@string/commencer"
+        android:textColor="#C8E6C9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsexe"
+        app:layout_constraintVertical_bias="0.173"
+        tools:ignore="HardcodedText,OnClick,UsingOnClickInXml" />
+
+
+    <ImageView
+        android:id="@+id/engrenage"
+        android:layout_width="61dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="332dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/Aide"
+        android:onClick="showrules"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/engrenage"
+        tools:ignore="OnClick,UsingOnClickInXml" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginBottom="38dp"
+        android:text="@string/Aide"
+        android:textColor="#614E4A4A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/engrenage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="245dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="36dp"
+        android:autofillHints=""
+        android:inputType="text"
+        android:text="@string/Prénom"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/lastname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="255dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="441dp"
+        android:layout_marginBottom="148dp"
+        android:autofillHints=""
+        android:inputType="text"
+        android:text="@string/nom"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/engrenage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor,MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/btnsexe"
+        android:layout_width="275dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastname"
+        app:layout_constraintVertical_bias="0.183">
+
+        <RadioButton
+            android:id="@+id/maleBtn"
+            android:layout_width="146dp"
+            android:layout_height="match_parent"
+            android:text="@string/homme" />
+
+        <RadioButton
+            android:id="@+id/femaleBtn"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:text="@string/femme" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

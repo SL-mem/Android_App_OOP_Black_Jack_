@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="358dp"
+    android:layout_height="358dp"
+    android:layout_gravity="center"
+    android:background="@drawable/popupargentbackground">
+
+    <ImageView
+        android:id="@+id/ImageArgent"
+        android:layout_width="158dp"
+        android:layout_height="158dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/eurologo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/TextBanque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banque"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/ImageArgent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/Phrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Votre Montant actuel est de"
+        android:textSize="20sp"
+        android:layout_below="@id/TextBanque"
+        android:gravity="center"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/ValeurMontant"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/Phrase"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="22dp"
+        android:gravity="center"
+        android:text="VALEUR"
+        android:textSize="20sp"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".jeu">
+
+
+    <ImageView
+        android:id="@+id/Croupier"
+        android:layout_width="465dp"
+        android:layout_height="314dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottombar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/croupier" />
+
+    <Button
+        android:id="@+id/ButtonMiser"
+        android:layout_width="85dp"
+        android:layout_height="43dp"
+        android:onClick="miser"
+        android:text="Miser"
+        app:backgroundTint="#336E35"
+        app:layout_constraintBottom_toTopOf="@+id/bottombar"
+        app:layout_constraintEnd_toStartOf="@+id/buttondoubler"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Croupier"
+        app:layout_constraintVertical_bias="0.519" />
+
+    <Button
+        android:id="@+id/buttondoubler"
+        android:layout_width="108dp"
+        android:layout_height="44dp"
+        android:onClick="doubler"
+        android:text="Doubler"
+        app:backgroundTint="#336E35"
+        app:layout_constraintBottom_toTopOf="@+id/bottombar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/Croupier"
+        app:layout_constraintTop_toBottomOf="@+id/Croupier"
+        app:layout_constraintVertical_bias="0.522" />
+
+    <!-- ICI C LE LAYOUT PR LES CARTES DU Croupier -->
+
+    <!-- ICI C LE LAYOUT PR LES CARTES DU JOUEUR -->
+
+
+    <Button
+        android:id="@+id/buttonpasser"
+        android:layout_width="91dp"
+        android:layout_height="43dp"
+        android:onClick="passer"
+        android:text="Passer"
+        app:backgroundTint="#336E35"
+        app:layout_constraintBottom_toTopOf="@+id/bottombar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toEndOf="@+id/buttondoubler"
+        app:layout_constraintTop_toBottomOf="@+id/Croupier"
+        app:layout_constraintVertical_bias="0.525" />
+
+    <TextView
+        android:id="@+id/MontantAfficher"
+        android:layout_width="112dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="Montant : 1000₽"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/Croupier"
+        app:layout_constraintEnd_toEndOf="@+id/Croupier"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="@+id/Croupier"
+        app:layout_constraintTop_toTopOf="@+id/Croupier"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <ImageView
+        android:id="@+id/bottombar"
+        android:layout_width="467dp"
+        android:layout_height="93dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light" />
+
+
+    <ImageView
+        android:id="@+id/piochercarte"
+        android:layout_width="67dp"
+        android:layout_height="84dp"
+        android:onClick="piocher"
+        app:layout_constraintBottom_toBottomOf="@+id/Croupier"
+        app:layout_constraintEnd_toEndOf="@+id/Croupier"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Croupier"
+        app:layout_constraintVertical_bias="0.339"
+        app:srcCompat="@drawable/piochercarte"
+        tools:ignore="OnClick,UsingOnClickInXml" />
+
+    <ImageView
+        android:id="@+id/imagedecor1"
+        android:layout_width="93dp"
+        android:layout_height="183dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottombar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Croupier"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/imagedecor1" />
+
+    <ImageView
+        android:id="@+id/imagedecor2"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="63dp"
+        android:rotation="21"
+        app:layout_constraintBottom_toTopOf="@+id/bottombar"
+        app:layout_constraintEnd_toStartOf="@+id/mise"
+        app:srcCompat="@drawable/imagedecor2" />
+
+    <TextView
+        android:id="@+id/mise"
+        android:layout_width="163dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="138dp"
+        android:gravity="center"
+        android:text="Mise : "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttondoubler"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttondoubler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/carte_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/carte_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/carte_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/carte_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ImageView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout2"
+        android:layout_width="370dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Croupier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="215dp">
+
+            <ImageView
+                android:id="@+id/carte_croupier_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/carte_croupier_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/carte_croupier_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/carte_croupier_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarMise"
+        android:layout_width="273dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="17dp"
+        android:max="995"
+        android:min="5"
+        android:progress="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mise" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

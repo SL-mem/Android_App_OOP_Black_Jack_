@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ValeurCartesRegles"
+    android:background="@drawable/backgroundregles"
+    android:backgroundTint="#40FFFFFF"
+    android:backgroundTintMode="src_over" >
+
+
+    <TextView
+        android:id="@+id/Valeurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="668dp"
+        android:text="VALEURS"
+        android:fontFamily="cursive"
+        android:textColor="#fafad2"
+        android:textSize="25sp"
+        android:background="@drawable/textview_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="289dp" />
+
+    <TextView
+        android:id="@+id/CartesColonne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="672dp"
+        android:fontFamily="cursive"
+        android:text="CARTES"
+        android:textColor="#fafad2"
+        android:textSize="25sp"
+        android:background="@drawable/textview_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Valeurs"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="58dp" />
+
+    <TextView
+        android:id="@+id/ValeurNormale"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:text="Valeur de la carte :\n2 à 10"
+        android:lineSpacingExtra="10dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintEnd_toEndOf="@id/Valeurs"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="@id/Valeurs"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteY="138dp" />
+
+    <ImageView
+        android:id="@+id/Carte3Trefle"
+        android:layout_width="61dp"
+        android:layout_height="95dp"
+        android:src="@drawable/carte3trefle"
+        app:layout_constraintBottom_toBottomOf="@+id/ValeurNormale"
+        app:layout_constraintTop_toTopOf="@+id/ValeurNormale"
+        tools:ignore="ContentDescription,MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <ImageView
+        android:id="@+id/carte7diamant"
+        android:layout_width="61dp"
+        android:layout_height="95dp"
+        android:src="@drawable/carte7diamant"
+        app:layout_constraintStart_toEndOf="@id/Carte3Trefle"
+        app:layout_constraintTop_toTopOf="@id/Carte3Trefle"
+        app:layout_constraintBottom_toBottomOf="@id/Carte3Trefle"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="94dp"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/ValeurRoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="@id/Valeurs"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@id/Valeurs"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <ImageView
+        android:id="@+id/CarteValet"
+        android:layout_width="61dp"
+        android:layout_height="95dp"
+        android:src="@drawable/cartevalet"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="277dp"
+        app:layout_constraintBottom_toBottomOf="@id/ValeurRoi"
+        app:layout_constraintTop_toTopOf="@id/ValeurRoi"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/CarteQueen"
+        android:layout_width="61dp"
+        android:layout_height="95dp"
+        android:src="@drawable/cartequeen"
+        app:layout_constraintStart_toEndOf="@id/CarteValet"
+        app:layout_constraintBottom_toBottomOf="@id/CarteValet"
+        app:layout_constraintTop_toTopOf="@id/CarteValet"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/CarteKing"
+        android:layout_width="61dp"
+        android:layout_height="95dp"
+        android:src="@drawable/carteking"
+        app:layout_constraintStart_toEndOf="@id/CarteQueen"
+        app:layout_constraintBottom_toBottomOf="@id/CarteValet"
+        app:layout_constraintTop_toTopOf="@id/CarteValet"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/ValeurAs"
+        android:layout_width="77dp"
+        android:layout_height="23dp"
+        android:fontFamily="sans-serif-black"
+        android:text="1 ou 11"
+        app:layout_constraintEnd_toEndOf="@id/Valeurs"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="@id/Valeurs"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <ImageView
+        android:id="@+id/CarteAs"
+        android:layout_width="61dp"
+        android:layout_height="95dp"
+        android:src="@drawable/carteas"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="277dp"
+        app:layout_constraintBottom_toBottomOf="@id/ValeurAs"
+        app:layout_constraintTop_toTopOf="@id/ValeurAs"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TitreInfoSupp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Rappelez-vous"
+        android:textColor="#fafad2"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="474dp" />
+
+    <TextView
+        android:id="@+id/ExplicationAs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:lineSpacingExtra="10dp"
+        android:text="Le As est toujours avantageux pour le joueur\nSi en ajoutant 11, la somme des cartes dépasse 21 alors le As vaut 1"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/TitreInfoSupp"
+        tools:ignore="HardcodedText,MissingConstraints,SmallSp"
+        tools:layout_editor_absoluteX="53dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
